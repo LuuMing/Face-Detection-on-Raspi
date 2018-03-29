@@ -8,6 +8,7 @@ import os
 import time
 from time import strftime,gmtime
 import sys
+from PIL import Image
 pygame.init()
 pygame.mixer.init()
 GPIO.setwarnings(False)
@@ -37,8 +38,8 @@ def play(name):
     time.sleep(3)
 faceCascade = cv2.CascadeClassifier('Cascades/haarcascade_frontalface_default.xml')
 cap = cv2.VideoCapture(0)
-cap.set(3,320)
-cap.set(4,240)    
+cap.set(3,160)
+cap.set(4,120)
 start_detection = save_audio('s_d','启动人脸识别')
 captured = save_audio('cap','捕捉到数据')
 saved = save_audio('saved','数据已保存')
