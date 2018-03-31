@@ -36,7 +36,6 @@ def play(name):
     pygame.mixer.music.load(name)
     pygame.mixer.music.play()
     time.sleep(3)
-faceCascade = cv2.CascadeClassifier('Cascades/haarcascade_frontalface_default.xml')
 cap = cv2.VideoCapture(0)
 cap.set(3,160)
 cap.set(4,120)
